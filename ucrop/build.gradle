@@ -1,5 +1,7 @@
 apply plugin: 'com.android.library'
 apply from: '../mavenpush.gradle'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
 
 android {
     compileSdkVersion 28
@@ -33,6 +35,7 @@ android {
 
 dependencies {
     implementation "androidx.appcompat:appcompat:${androidx_appcompat_version}"
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
     implementation "androidx.exifinterface:exifinterface:${androidx_exifinterface_version}"
     implementation "androidx.transition:transition:${androidx_transition_version}"
     implementation "com.squareup.okhttp3:okhttp:3.12.1"
