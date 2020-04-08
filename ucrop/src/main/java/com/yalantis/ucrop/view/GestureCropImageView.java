@@ -26,14 +26,17 @@ public class GestureCropImageView extends CropImageView {
 
     public GestureCropImageView(Context context) {
         super(context);
+        init();
     }
 
     public GestureCropImageView(Context context, AttributeSet attrs) {
         this(context, attrs, 0);
+        init();
     }
 
     public GestureCropImageView(Context context, AttributeSet attrs, int defStyle) {
         super(context, attrs, defStyle);
+        init();
     }
 
     public void setScaleEnabled(boolean scaleEnabled) {
@@ -93,9 +96,7 @@ public class GestureCropImageView extends CropImageView {
         return true;
     }
 
-    @Override
     protected void init() {
-        super.init();
         setupGestureListeners();
     }
 
